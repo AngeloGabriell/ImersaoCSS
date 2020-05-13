@@ -1,14 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 Body {
     background: url('https://d168rbuicf8uyi.cloudfront.net/wp-content/uploads/2019/06/12154708/A-natureza-uma-aliada-busca-liberdade-alma.jpg');
     background-size: auto 100vh;
-    font-family: Arial;
+    font-family: 'Cormorant Garamond', serif;
     height: 100vh;
+    font-size: 12px;
   }
-  
+
+  @media (min-width: 400px) {
+      Body {
+          font-size: 14px;
+      }
+  }
+
+  @media (min-width: 600px) {
+    Body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 800px) {
+    Body {
+        font-size: 20px;
+    }
+}
+
+header {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+} 
+
   .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
+  .menu a {
+      /*background-color: brown;*/
+      display: block;
+      padding: 10px;
+  }
   .menu li {
     list-style: none;
   }
@@ -32,6 +72,57 @@ Body {
     text-align: center
   }
   
+  .site-title {
+    font-family: 'Permanent Marker', cursive;
+  }
+
   .site-subtitle {
     font-style: italic;
+    font-family: 'Source Code Pro', monospace;
   }
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+  }
+
+  .portfolio h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 2em;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+    align-content: center;
+  }
+
+  @media (min-width: 520px) {
+    .portfolio .grid {
+      grid-template-columns: 250px 250px;
+    }
+  }
+
+  /*@media (min-width: 850px) {
+    .portfolio .grid {
+      grid-template-columns: 250px 250px 250px;
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 40px);
+    }
+  }*/
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+      height: 180px;
+      width: 240px;
+      object-fit: cover;
+      object-position: left bottom;
+  }
+
